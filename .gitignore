@@ -1,0 +1,89 @@
+# ---- site-specific config (templates *.example are committed) ----
+cluster.env
+slurm/env.sh
+
+# ---- data: never distributed with the code (see data/README.md) ----
+data/*
+!data/README.md
+
+# ---- run outputs / trained models (10s–100s of GB) ----
+Ionomic_Prediction_Run_*/
+estimator_check_*/
+_train_smoke_run/
+AutogluonModels/
+_shards/
+logs/
+manifests/*.csv
+slurm/CURRENT_RUN_DIR_*
+
+# ---- environments / caches ----
+.venv/
+__pycache__/
+*.pyc
+.idea/
+.DS_Store
+*.log
+
+# ---- generated figures & reports (reproducible from the pipeline) ----
+*.pdf
+*.png
+docs/
+
+# ---- not part of the published pipeline ----
+# The repository holds only the code that produced the article's figures and
+# tables. Everything below exists in the working directory but is not published.
+#
+# analyses that ran but are not reported in the article
+baselines.py
+domain_calibration.py
+run_tabpfn_shap_32.py
+# figures not in the article
+make_cv_figure.py
+make_tier_comparison.py
+make_cost_report.py
+make_fe_ct_figure.py
+make_methods_figure.py
+# exploratory / one-off
+kca_ratio_analysis.py
+mo_wue_test.py
+tabpfn_q2_sgk.py
+tabfm_benchmark.py
+make_hebrew_summary.py
+make_pi_cluster_brief.py
+make_shap_runtime_brief.py
+regen_figures_local.py
+# Mac<->cluster transfer helpers and cluster housekeeping (site-specific)
+stage_for_cluster.sh
+stage_train_for_cluster.sh
+pull_results_to_mac.sh
+pull_train_results.sh
+backup_cluster.sh
+stage_robustness_models.sh
+cluster.env.example
+slurm/discover.sh
+slurm/clear_stale_shap.sh
+slurm/smoke_test.sh
+slurm/train_smoke.sh
+# earlier single-node training path (not used for the article) + calibration
+slurm/submit_all.sh
+slurm/submit_both.sh
+slurm/submit_train_all.sh
+slurm/train_sweep.sbatch
+slurm/calibration.sbatch
+# internal briefs / handoffs with lab-specific detail
+CLUSTER.md
+CLUSTER_RERUN_RUNBOOK.md
+RUNBOOK.md
+LINUX_PRIMER.md
+RUNBOOK_HURCS.md
+HANDOFF*.md
+scheme2_caption.txt
+
+# ---- editor / assistant local state ----
+.claude/
+
+# ---- datasets in any form, and every generated CSV / notebook ----
+# (no CSV is a pipeline input; all are data copies or run outputs)
+*.csv
+*.ipynb
+KCa_ratio_analysis/

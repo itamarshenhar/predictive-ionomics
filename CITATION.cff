@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this pipeline, please cite the associated article."
+title: "Predictive ionomics pipeline: leakage-free cross-validated prediction of leaf mineral composition with AutoGluon and TabPFN"
+type: software
+authors:
+  - family-names: Shenhar
+    given-names: Itamar
+    orcid: "https://orcid.org/0009-0008-4081-8831"
+    affiliation: "Nanyang Technological University; Hebrew University of Jerusalem; SHARE"
+  - family-names: Moshelion
+    given-names: Menachem
+    orcid: "https://orcid.org/0000-0003-0156-2884"
+    affiliation: "Hebrew University of Jerusalem; SHARE"
+preferred-citation:
+  type: article
+  title: "Designed nutrient-gradient phenotyping enables predictive ionomics of tropical leafy greens"
+  authors:
+    - family-names: Shenhar
+      given-names: Itamar
+    - family-names: Pebes-Trujillo
+      given-names: Miguel R.
+    - family-names: Harikumar
+      given-names: Aravind
+    - family-names: Zhao
+      given-names: Zhitong
+    - family-names: Tan
+      given-names: Li Yi
+    - family-names: Setyawati
+      given-names: Magdiel Inggrid
+    - family-names: He
+      given-names: Jie
+    - family-names: Herrmann
+      given-names: Ittai
+    - family-names: Ng
+      given-names: Kee Woei
+    - family-names: Gavish
+      given-names: Matan
+    - family-names: Moshelion
+      given-names: Menachem
+  # journal / year / doi: fill in on acceptance
